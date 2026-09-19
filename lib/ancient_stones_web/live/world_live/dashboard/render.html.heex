@@ -199,7 +199,7 @@
 
       <%= if @section == "geography" do %>
         <div class="grid min-h-[800px] gap-4 bg-zinc-100 p-4 xl:grid-cols-[320px_300px_minmax(0,1fr)_340px]">
-          <aside class="flex min-h-0 flex-col overflow-hidden rounded-md border border-zinc-200 bg-white">
+          <aside class="overflow-hidden rounded-md border border-zinc-200 bg-white">
             <div class="border-b border-zinc-200 px-4 py-3">
               <h2 class="text-sm font-semibold text-zinc-800">Geography</h2>
               <p class="text-xs text-zinc-500">Continents, provinces, and holds</p>
@@ -209,7 +209,7 @@
               phx-hook=".GeographyDisclosureState"
               data-storage-key={"ancient-stones:world:#{@world.id}:geography-disclosures"}
               data-disclosure-ready="false"
-              class="min-h-0 flex-1 space-y-3 overflow-y-auto p-3 text-sm data-[disclosure-ready=false]:invisible"
+              class="max-h-[800px] space-y-3 overflow-y-auto p-3 text-sm data-[disclosure-ready=false]:invisible"
             >
               <details
                 :for={continent <- sidebar_continents(@filtered_continents)}
@@ -422,7 +422,7 @@
             </script>
           </aside>
 
-          <section class="flex min-h-0 flex-col overflow-hidden rounded-md border border-zinc-200 bg-white">
+          <section class="overflow-hidden rounded-md border border-zinc-200 bg-white">
             <div class="flex items-center justify-between border-b border-zinc-200 px-4 py-3">
               <div>
                 <h2 class="text-sm font-semibold text-zinc-800">Locations</h2>
@@ -438,7 +438,7 @@
               </.link>
             </div>
 
-            <div id="location-list" class="min-h-0 flex-1 space-y-1.5 overflow-y-auto p-1.5">
+            <div id="location-list" class="max-h-[800px] space-y-1.5 overflow-y-auto p-1.5">
               <div
                 :if={is_nil(@selected_hold)}
                 class="px-4 py-8 text-center text-sm text-zinc-500"
@@ -3277,7 +3277,7 @@
               id="characters-dashboard"
               class="grid min-h-[800px] gap-4 bg-zinc-100 p-4 xl:grid-cols-[320px_minmax(0,1fr)_340px]"
             >
-              <section class="flex min-h-0 flex-col overflow-hidden rounded-md border border-zinc-200 bg-white">
+              <section class="overflow-hidden rounded-md border border-zinc-200 bg-white">
                 <div class="flex items-center justify-between border-b border-zinc-200 px-4 py-3">
                   <div>
                     <h2 class="text-sm font-semibold text-zinc-800">Characters</h2>
@@ -3288,7 +3288,7 @@
                   </span>
                 </div>
 
-                <div id="character-list" class="min-h-0 flex-1 space-y-1.5 overflow-y-auto p-1.5">
+                <div id="character-list" class="max-h-[800px] space-y-1.5 overflow-y-auto p-1.5">
                   <div
                     :if={@filtered_characters == []}
                     class="px-4 py-8 text-center text-sm text-zinc-500"
@@ -4095,7 +4095,7 @@
               id="calendar-dashboard"
               class="grid min-h-[800px] gap-4 bg-zinc-100 p-4 xl:grid-cols-[320px_minmax(0,1fr)_340px]"
             >
-              <section class="flex min-h-0 flex-col overflow-hidden rounded-md border border-zinc-200 bg-white">
+              <section class="overflow-hidden rounded-md border border-zinc-200 bg-white">
                 <div class="flex items-center justify-between border-b border-zinc-200 px-4 py-3">
                   <div>
                     <h2 class="text-sm font-semibold text-zinc-800">Calendar</h2>
@@ -4106,7 +4106,7 @@
                   </span>
                 </div>
 
-                <div id="calendar-list" class="min-h-0 flex-1 space-y-1.5 overflow-y-auto p-1.5">
+                <div id="calendar-list" class="max-h-[800px] space-y-1.5 overflow-y-auto p-1.5">
                   <div
                     :if={@filtered_calendars == []}
                     class="px-4 py-8 text-center text-sm text-zinc-500"

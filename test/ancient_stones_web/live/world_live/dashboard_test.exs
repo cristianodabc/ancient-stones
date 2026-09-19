@@ -2305,8 +2305,12 @@ defmodule AncientStonesWeb.WorldLive.DashboardTest do
 
     assert has_element?(view, "#society-dashboard.bg-zinc-100")
     assert has_element?(view, "#society-dashboard aside header", "Society")
-    assert has_element?(view, "#society-dashboard > aside.flex.flex-col")
-    assert has_element?(view, "#society-record-list.min-h-0.flex-1.overflow-y-auto")
+
+    assert has_element?(
+             view,
+             "#society-record-list[class~='max-h-[800px]'].overflow-y-auto"
+           )
+
     assert has_element?(view, "#society-record-details #society-mode-navigation")
     assert has_element?(view, "#society-households[phx-update='stream']")
     assert has_element?(view, "#society-household-form")
