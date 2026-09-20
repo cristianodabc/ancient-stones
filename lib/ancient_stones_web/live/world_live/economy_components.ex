@@ -68,12 +68,12 @@ defmodule AncientStonesWeb.WorldLive.EconomyComponents do
       id="economy-dashboard"
       class="grid min-h-[800px] gap-4 bg-zinc-100 p-4 xl:grid-cols-[320px_minmax(0,1fr)_380px] dark:bg-zinc-900"
     >
-      <aside class="flex min-h-0 flex-col overflow-hidden rounded-md border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-950">
+      <aside class="overflow-hidden rounded-md border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-950">
         <header class="border-b border-zinc-200 px-4 py-3 dark:border-zinc-700">
           <h2 class="stone-heading text-sm font-semibold">Economy</h2>
           <p class="stone-muted text-xs">Trade, taxation, exemptions, and treasury shares</p>
         </header>
-        <div id="economy-record-list" class="min-h-0 flex-1 space-y-2 overflow-y-auto p-2">
+        <div id="economy-record-list" class="max-h-[800px] space-y-2 overflow-y-auto p-2">
           <.group
             title="Trade routes"
             records={@trade_routes}
