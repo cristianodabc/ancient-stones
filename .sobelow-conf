@@ -1,5 +1,5 @@
 [
-  exit: true,
+  exit: "low",
   format: "txt",
   ignore: [],
   ignore_files: [],
